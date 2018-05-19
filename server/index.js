@@ -4,6 +4,7 @@ const path = require('path')
 
 const app = express()
 const PORT = 3000 // process.env.PORT || 3000 -- use port in env file, or 3000
+require('../db/config')
 
 app.use(bodyParser.json())
 //middleware - every package goes thru middleware, before sending it back, dont have to chunk it
@@ -20,6 +21,22 @@ app.listen(PORT, (err) => {
   console.log('success on ', PORT)
 })
 
+
+//5/19 - database stuff
+//npm install
+//mysql
+//mysql2
+//sequelize
+
+//server index -- imports create tree
+
+//split up tables by folders
+//split up by components
+
+//models are like tables?
+//
+
+///----------
 
 //in package.json -  "start": "nodemon server/index.js" - tells nodemon to watch index.js
 // "build": "webpack - w" in package.json - it looks for webpack config.js, where we specify 
